@@ -19,24 +19,76 @@
 	body{font-family: "PT Mono",Courier,"微軟正黑體","Microsoft JhengHei";background-image:url(/img/tileable_wood_texture.png);}
 	.mj{font-family: "PT Mono",Courier,"微軟正黑體","Microsoft JhengHei";font-weight: bold;color: #353535;}
 	#boxedMeal{margin: 50px 0 0 0;}
+	.carousel{width:640px; height:640px;}
+	.carousel-control {width: 0%;}
 	</style>
 </head>
 <body>
-	<div class="text-center">
-	<h1 class="mj">ChuanXD距離不用吃提鍋的日子還有</h1>
-	<div id="countdown"></div>
-	<div id="boxedMeal"><img src="https://lh3.googleusercontent.com/-taGaiybFO0s/Ul6Y2fBSFsI/AAAAAAAAE0U/oWmYEyCFP_A/w310-h518-no/2013-10-16+11.30.10.jpg"></div>
-	<iframe src="https://www.facebook.com/plugins/like.php?href=http://ohyayaya.com/demobilize_counter.html"
-	        scrolling="no" frameborder="0"
-	        style="border:none; width:450px; height:80px"></iframe>
-	            <div id="disqus_thread"></div>
-    
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	<div class="container text-center">
+		<h1 class="mj">ChuanXD距離不用吃提鍋的日子還有</h1>
+		<div id="countdown"></div>
+		<div class="container-fluid">
+			<div class="row">
+				<div id="boxedMeal" class="">
+					<div id="myCarousel" class="carousel slide col-md-6 col-md-offset-3" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+					    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					    <li data-target="#myCarousel" data-slide-to="1"></li>
+					    <li data-target="#myCarousel" data-slide-to="2"></li>
+					    <li data-target="#myCarousel" data-slide-to="3"></li>
+					    <li data-target="#myCarousel" data-slide-to="4"></li>
+					  </ol>
+
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+					    <div class="item active">
+					      <img id="img1" src="" >
+					    </div>
+					    <div class="item">
+					      <img id="img2" src="" >
+					    </div>
+					    <div class="item">
+					      <img id="img3" src="" >
+					    </div>
+					    <div class="item">
+					      <img id="img4" src="" >
+					    </div>
+					    <div class="item">
+					      <img id="img5" src="" >
+					    </div>
+					  </div>
+
+
+				  	<!-- Controls -->
+					  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left"></span>
+					  </a>
+					  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right"></span>
+					  </a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<iframe src="https://www.facebook.com/plugins/like.php?href=http://ohyayaya.com/demobilize_counter.html"
+			        scrolling="no" frameborder="0"
+			        style="border:none; width:450px; height:80px">
+					  </iframe>
+					  <div id="disqus_thread"></div>
+				    
+				    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+				  </div>
+		    </div>		
+			</div>
+		</div>
+		
     
 	</div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script	src="/js/jquery.timeTo.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<script>
 	$('#countdown').timeTo({
     timeTo: new Date(new Date('Mon Aug 18 2014 00:00:00 GMT+0800 (台北標準時間)')),
@@ -56,6 +108,22 @@
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
+    </script>
+    <script>
+    	var photo = new Array("http://distilleryimage11.ak.instagram.com/4600d988201111e3a6b722000a1fc7c5_7.jpg", "http://distilleryimage6.ak.instagram.com/ab58f082201511e3b3be22000aa821aa_7.jpg", "http://distilleryimage5.ak.instagram.com/c5ef199e238a11e3a2f822000a9e0707_7.jpg", "http://distilleryimage7.ak.instagram.com/0b0cd63024e211e3a53722000aeb43de_7.jpg", "http://distilleryimage3.ak.instagram.com/7a2a79b224e411e3999e22000a1f8afc_7.jpg", "http://distilleryimage7.ak.instagram.com/2ae791b825df11e3bf8b22000a1fb004_7.jpg", "http://distilleryimage8.ak.instagram.com/b19e6d442bca11e3949722000a1f90e1_7.jpg", "http://distilleryimage9.ak.instagram.com/9750880c2bf511e3b78322000a1fac13_7.jpg", "http://distilleryimage10.ak.instagram.com/89ee2f5a2e1311e38bf022000a9f139a_7.jpg", "http://distilleryimage10.ak.instagram.com/2d64c0722eeb11e3b1b722000a1d0aba_7.jpg", "http://distilleryimage5.ak.instagram.com/b1c659282ef211e3816b22000a9f17df_7.jpg", "http://distilleryimage3.ak.instagram.com/033637ce34b111e39f3f22000a1f978e_7.jpg", "http://distilleryimage3.ak.instagram.com/6ee26e44361311e3a0d522000a1f970a_7.jpg", "http://distilleryimage5.ak.instagram.com/6a0f67fc39f411e3be4122000a1f9d51_7.jpg", "http://distilleryimage4.ak.instagram.com/fd52dd6039f811e3920622000ae9085f_7.jpg", "http://distilleryimage4.ak.instagram.com/f6039d683f7711e392c422000a1fbe6b_7.jpg", "http://photos-a.ak.instagram.com/hphotos-ak-prn/928993_533465516744368_1360655497_n.jpg","http://distilleryimage8.ak.instagram.com/fc66512e427811e3bb8a22000a1f97fc_7.jpg", "http://distilleryimage4.ak.instagram.com/2d85d53a4b3a11e39c3412ffebc89ea2_7.jpg", "http://distilleryimage3.ak.instagram.com/7f9014a64fec11e3be410ea423508d53_7.jpg", "http://distilleryimage1.ak.instagram.com/e21c5d9a500611e3928d12ca4fdf17b7_7.jpg", "http://distilleryimage11.ak.instagram.com/1c8e65f857ce11e3bdab12d534f34f8c_7.jpg", "http://photos-c.ak.instagram.com/hphotos-ak-ash/1390446_178321305709730_662571787_n.jpg", "http://distilleryimage11.ak.instagram.com/edc30f60609911e3bf200a16a556a2d2_7.jpg", "http://distilleryimage8.ak.instagram.com/f2bc8528609911e3ae6912675798295f_7.jpg", "http://distilleryimage5.ak.instagram.com/38183842609a11e3ad9212062b8fc698_7.jpg", "http://distilleryimage10.ak.instagram.com/25548e3a609b11e3ad1912bab8a9c1e3_7.jpg", "http://distilleryimage9.ak.instagram.com/8eb3e97a609b11e38e0712ba5cc2f9e2_7.jpg", "http://distilleryimage1.ak.instagram.com/bfadd33662f511e3a27f0e1c4bab99dd_7.jpg", "http://distilleryimage10.ak.instagram.com/375c506062f611e3aee912ce08225afa_7.jpg", "http://distilleryimage5.ak.instagram.com/2268d474691f11e384d112dcbdd007c9_7.jpg", "http://distilleryimage2.ak.instagram.com/d4002e2e693f11e38be1124d9f8f64ba_8.jpg", "http://distilleryimage9.ak.instagram.com/ee0b90ec693f11e39e8912e7b1a3c18d_8.jpg", "http://photos-f.ak.instagram.com/hphotos-ak-ash/1516716_686671358021237_733863877_n.jpg","http://distilleryimage4.ak.instagram.com/094d590a72e411e38c731287f228a624_8.jpg", "http://distilleryimage2.ak.instagram.com/c93099f0931211e3a343120758c0a81e_8.jpg", "http://distilleryimage2.ak.instagram.com/3730c330a54211e39b120a26978b387e_8.jpg", "http://24h.pchome.com.tw/prod/DDAFGN-A79728865");
+    	function photoRandom() {
+    		min =0;
+    		max = photo.length - 1;
+				return Math.floor(Math.random()*(max-min+1)+min);
+			}
+			$("#img1").attr("src",photo[photoRandom()]);
+			$("#img2").attr("src",photo[photoRandom()]);
+			$("#img3").attr("src",photo[photoRandom()]);
+			$("#img4").attr("src",photo[photoRandom()]);
+			$("#img5").attr("src",photo[photoRandom()]);
+    	$(".carousel").carousel({
+			  interval: 2000
+			})
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 	<script>
