@@ -21,14 +21,21 @@
 	#boxedMeal{margin: 50px 0 0 0;}
 	.carousel{width:640px; height:640px;}
 	.carousel-control {width: 0%;}
+	#main{margin-top: 50px;}
+	#boxedMeal{margin-top: -10px;}
 	</style>
 </head>
 <body>
 	<div class="container text-center">
 		<h1 class="mj">ChuanXD距離不用吃提鍋的日子還有</h1>
 		<div id="countdown"></div>
-		<div class="container-fluid">
+		<div id="main" class="container-fluid">
 			<div class="row">
+				<div class="progress col-md-offset-3" style="width: 55%">
+				  <div id="remain-bar" class="progress-bar progress-bar-warning" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+				    <span id="progressSpan"></span>
+				  </div>
+				</div>
 				<div id="boxedMeal" class="">
 					<div id="myCarousel" class="carousel slide col-md-6 col-md-offset-3" data-ride="carousel">
 					  <!-- Indicators -->
@@ -82,21 +89,28 @@
 		    </div>		
 			</div>
 		</div>
-		
-    
 	</div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script	src="/js/jquery.timeTo.min.js"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<script>
-	$('#countdown').timeTo({
-    timeTo: new Date(new Date('Mon Aug 18 2014 00:00:00 GMT+0800 (台北標準時間)')),
-    theme: "black",
-    displayCaptions: true,
-    fontSize: 48,
-    captionSize: 14
-	});
+		$(document).ready(function(){
+			$('#countdown').timeTo({
+		    timeTo: new Date(new Date('Mon Aug 18 2014 00:00:00 GMT+0800 (台北標準時間)')),
+		    theme: "black",
+		    displayCaptions: true,
+		    fontSize: 48,
+		    captionSize: 14
+			});
+			var  timeString = $("#countdown ul li").text();
+			var  timeArray = timeString.split("");
+			var  remainDays = timeArray[0]+timeArray[2]+timeArray[4];
+			var  barValue = Math.round((380-remainDays)/380*100);
+			console.log(barValue);
+			$("#remain-bar").attr("aria-valuenow",barValue).attr("style","width: "+barValue+"%");
+			$("#progressSpan").text("廢物已完成" + barValue + "%");
+		});
 	</script>
 	<script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
