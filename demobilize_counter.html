@@ -106,9 +106,8 @@
 			});
 			var  timeString = $("#countdown ul li").text();
 			var  timeArray = timeString.split("");
-			var  remainDays = timeArray[0]+timeArray[2]+timeArray[4];
+			var  remainDays = Number(timeArray[0])+Number(timeArray[2])*10+Number(timeArray[4])*100;
 			var  barValue = Math.round((380-remainDays)/380*100);
-			console.log(barValue);
 			$("#remain-bar").attr("aria-valuenow",barValue).attr("style","width: "+barValue+"%");
 			$("#progressSpan").text("廢物已完成" + barValue + "%");
 		});
